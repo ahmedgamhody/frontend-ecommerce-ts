@@ -47,6 +47,7 @@ export const ordersSlice = createSlice({
       state.loading = "succeeded";
       state.orderList = action.payload;
     });
+
     builder.addCase(actGetOrders.rejected, (state, action) => {
       state.loading = "failed";
       if (isString(action.payload)) {

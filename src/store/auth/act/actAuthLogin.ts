@@ -21,6 +21,7 @@ const actAuthLogin = createAsyncThunk(
   "auth/actAuthLogin",
   async (formData: formData, thunk) => {
     const { rejectWithValue } = thunk;
+
     try {
       const res = await axios.post<TResponse>("/login", formData);
       return res.data;
